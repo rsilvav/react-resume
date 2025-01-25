@@ -31,15 +31,9 @@ jobs:
         run: npm test -- --coverage
         continue-on-error: true
 
-      # 5. Instalar Sonar
-      - name: Install SonarQube Scanner
-        run: |
-          npm install -g sonar-scanner
-          chmod +x $(npm bin -g)/sonar-scanner
-
       # 5. Subir resultados a SonarQube
       - name: SonarQube Scan
-        uses: sonarsource/sonarcloud-github-action@v4.0.0
+        uses: SonarSource/sonarqube-scan-action@v4.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
