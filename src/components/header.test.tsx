@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Header from './Header'; // Asegúrate de que esta ruta sea correcta
+import Header from './header'; // Asegúrate de que esta ruta sea correcta
 
 describe('Header Component', () => {
     const mockResumeInfo = {
